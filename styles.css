@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	user-select: none;
+}
+html {
+	overflow-y: scroll;
+	width: 100vw;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #f1f1ff;
+}
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex: 1;
+	min-height: 100vh;
+	background-image: linear-gradient(to right top, #8b49dc, #7a3cc7, #6a2fb3, #5a229f, #4a148c);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.container {
+	width: 1320px;
+	margin: 0 auto;
+}
+
+.info ul {
+	width: 500px;
+	font-size: 16px;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+	margin: 60px auto;
+}
+
+.info ul li {
+	padding: 5px;
+}
+
+ul li:nth-child(1) {
+	cursor: pointer;
+}
+
+.fa-align-left {
+	display: block;
+	font-size: 35px;
+	margin-left: 20px;
+	width: 1.6em;
+	text-align: center;
+	line-height: 1.6em !important;
+	border-radius: 0.8em !important;
+	color: #fff;
+	background: rgb(115, 66, 155);
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09);
+	cursor: pointer;
+}
+
+.slider_wrapper {
+	transform: scale(0);
+	transform-origin: right;
+	opacity: 0;
+	margin: 50px auto;
+	width: 850px;
+	padding: 10px;
+	border: 2px solid #fff;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09);
+	overflow: hidden;
+	transition: all .35s;
+	animation: fade 1s;
+}
+
+.notice {
+	visibility: hidden;
+}
+
+#display:checked ~ .info > ul > label > .notice {
+	visibility: visible;
+	transition: all .3s;
+}
+
+#display:checked ~ .slider_wrapper {
+	transform: scale(1);
+	opacity: 1;
+	visibility: visible;
+}
+
+.slider-content,
+.slider-content-1,
+.slider-content-2,
+.slider-content-3 {
+	position: absolute;
+	bottom: 100%;
+	transform: translateY(-100%);
+	visibility: hidden;
+	opacity: 0;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-end;
+	animation: fade .5s;
+	transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slider-content__image {
+	position: absolute;
+	left: 0;
+	margin-left: 10px;
+	width: 250px;
+	height: 250px;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-transition: 400ms width ease;
+	transition: 400ms width ease;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: .3s ease-in-out;
+}
+
+input {
+	display: none;
+}
+
+#img-expand:checked ~ label div.slider-content__image {
+	z-index: 99;
+	width: 810px;
+	height: 311px;
+	border-top-left-radius: initial !important;
+	border-bottom-right-radius: initial !important;
+}
+
+#img-expand:checked ~ label div.slider-content__text {
+	z-index: -3;
+	opacity: 0;
+}
+
+.slider-content__text {
+	width: 525px;
+	font-size: 16px;
+	line-height: 1.6rem;
+	transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.slider-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider-title {
+	width: 50%;
+	color: #5a229f;
+	padding-bottom: 20px;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+h1.slider-date {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.slider-item p {
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+.btn-linkedup {
+	font-size: 1.15rem;
+	font-weight: 600;
+	width: 100%;
+	padding: 10px;
+	margin: 15px 0px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-image: linear-gradient(to right top, #8b49dc, #7a3cc7, #6a2fb3, #5a229f, #4a148c);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+	transition: all .2s;
+}
+
+.btn-linkedup:hover {
+	transform: translateY(-4px);
+	opacity: .8;
+}
+
+/*== social media properties ==*/
+
+.social-media__content {
+	width: 45%;
+	display: flex;
+}
+
+.social-media__content a > i {
+	margin: 0 6px;
+	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+i.fa,
+.fab {
+	/* font-size: 1.3em;  */
+	width: 1.6em;
+	text-align: center;
+	line-height: 1.6em !important;
+	border-radius: 0.8em !important;
+	background: #fff;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.linkedin i {
+	color: #007bb5;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.github i {
+	color: #000;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.facebook i {
+	color: #3b5998;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.twitter i {
+	color: #1da1f2;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.instagram i {
+	color: #c32aa3;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.social-media__content i:hover {
+	color: rgb(109, 36, 177);
+	transform: scale(1.2);
+}
+
+/*=======================================================================*/
+
+/* The rectangle indicators */
+
+.slider-navigation {
+	display: flex;
+	margin-bottom: 15px;
+	justify-content: center;
+}
+
+.navigation-links {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.rectangle,
+.rectangle-1,
+.rectangle-2,
+.rectangle-3 {
+	cursor: pointer;
+	height: 10px;
+	width: 100px;
+	margin: 0 5px;
+	background: #ffff00;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09);
+	transition: 1s ease;
+}
+
+.rectangle:hover,
+.rectangle-1:hover,
+.rectangle-2:hover,
+.rectangle-3:hover {
+	background: #6a2fb3;
+}
+
+/* == Toggle slides pages == */
+
+#activate-link:checked ~ label > .slider-content,
+#activate-link-1:checked ~ label > .slider-content-1,
+#activate-link-2:checked ~ label > .slider-content-2,
+#activate-link-3:checked ~ label > .slider-content-3 {
+	position: relative;
+	transform: translateY(0);
+	visibility: visible;
+	opacity: 1;
+}
+
+#activate-link:checked ~ .slider-navigation > div.navigation-links > label > div.rectangle {
+	background: rgb(207, 14, 14);
+	transition: .3s ease;
+}
+
+#activate-link-1:checked ~ .slider-navigation > div.navigation-links > label > div.rectangle-1 {
+	background: rgb(207, 14, 14);
+	transition: .3s ease;
+}
+
+#activate-link-2:checked ~ .slider-navigation > div.navigation-links > label > div.rectangle-2 {
+	background: rgb(207, 14, 14);
+	transition: .3s ease;
+}
+
+#activate-link-3:checked ~ .slider-navigation > div.navigation-links > label > div.rectangle-3 {
+	background: rgb(207, 14, 14);
+	transition: .3s ease;
+}
+
+/* Fading animation */
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4;
+	}
+	to {
+		opacity: 1;
+	}
+}
