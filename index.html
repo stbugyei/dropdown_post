@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Blog | Drop</title>
+    <title>Dropdown | Post</title>
 </head>
 
 <body>
-    <div class="head">
+    <div class="header">
         <div class="container">
 
             <input type="checkbox" id="display">
             <div class="info">
                 <ul>
                     <label for="display">
-                        <li> Click here to display Post <i class="fas fa-align-left"></i></li>
+                        <li class="showpost"> <span> Click here to Display Post <i
+                                    class="far fa-hand-point-left"></i></span> <i class="fas fa-align-right"></i></li>
+                        <li class="hidepost"> <span>Click here to Hide Post <i
+                                    class="far fa-hand-point-left"></i></span> <i class="fas fa-times"></i></li>
                     </label>
                     <label for="notice">
                         <div class="notice">
@@ -43,56 +47,54 @@
                             <img src="./image/Polish_20200611_211910631.jpg" alt="">
                         </div>
 
-                        <label for="text-expand">
+                        <div class="slider-content__text">
 
-                            <div class="slider-content__text">
-
-                                <div class="slider-header">
-                                    <div class="slider-title">
-                                        <h2> I am Emmanuel</h2>
-                                    </div>
-
-                                    <div class="social-media__content">
-                                        <div class="linkedin"><a href='#'>
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </div>
-                                        <div class="github"> <a href='#'>
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                        <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </div>
-                                        <div class="twitter"> <a href='#'>
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </div>
-                                        <div class="instagram"> <a href='#'>
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                            <div class="slider-header">
+                                <div class="slider-title">
+                                    <h2> I am Emmanuel</h2>
                                 </div>
 
-                                <div class="slider-item">
-                                    <h1 class="slider-date"> 19th March 2020 10:45 PM</h1>
-
-                                    <p>explicabo rerum adipisci ratione, blanditiis
-                                        natus nesciunt vitae similique. Laboriosam, hic.
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a fuga
-                                        voluptatem
-                                        quod
-                                        deleniti tempora officiis Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing elit. Quia
-                                    </p>
+                                <div class="social-media__content">
+                                    <div class="linkedin"><a href='#'>
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="github"> <a href="https://github.com/stbugyei?tab=repositories"
+                                            target=_blank>
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="twitter"> <a href='#'>
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="instagram"> <a href='#'>
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                                <a href="https://github.com/stbugyei?tab=repositories" target= _blank><button
-                                        class="btn-linkedup">Learn more</button></a>
                             </div>
-                        </label>
+
+                            <div class="slider-item">
+                                <h1 class="slider-date"> 19th March 2020 10:45 PM</h1>
+
+                                <p>explicabo rerum adipisci ratione, blanditiis
+                                    natus nesciunt vitae similique. Laboriosam, hic.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a fuga
+                                    voluptatem
+                                    quod
+                                    deleniti tempora officiis Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Quia
+                                </p>
+                            </div>
+                            <a href="https://github.com/stbugyei?tab=repositories" target=_blank><button
+                                    class="btn-linkedup">Learn more</button></a>
+                        </div>
                     </div>
 
-                    <div class="slider-content-1">
+                    <div class="slider-content">
                         <div class="slider-content__image">
                             <img src="./image/Anna.jpg" alt="">
                         </div>
@@ -138,118 +140,112 @@
                                     elit. Quia
                                 </p>
                             </div>
-                            <a href="https://github.com/anyariazantceva?tab=repositories" target= _blank><button
+                            <a href="https://github.com/anyariazantceva?tab=repositories" target=_blank><button
                                     class="btn-linkedup">Learn more</button></a>
                         </div>
                     </div>
 
-                    <div class="slider-content-2">
+                    <div class="slider-content">
                         <div class="slider-content__image">
                             <img src="./image/Helmi.jpg" alt="">
                         </div>
 
-                        <label for="text-expand">
-                            <div class="slider-content__text">
+                        <div class="slider-content__text">
 
-                                <div class="slider-header">
-                                    <div class="slider-title">
-                                        <h2> She is Helmi</h2>
+                            <div class="slider-header">
+                                <div class="slider-title">
+                                    <h2> She is Helmi</h2>
+                                </div>
+
+                                <div class="social-media__content">
+                                    <div class="linkedin"><a href='#'>
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
                                     </div>
-
-                                    <div class="social-media__content">
-                                        <div class="linkedin"><a href='#'>
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </div>
-                                        <div class="github"> <a href='#'>
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                        <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </div>
-                                        <div class="twitter"> <a href='#'>
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </div>
-                                        <div class="instagram"> <a href='#'>
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
+                                    <div class="github"> <a href='#'>
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="twitter"> <a href='#'>
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="instagram"> <a href='#'>
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="slider-item">
-                                    <h1 class="slider-date">10th February 2020 7:15 AM</h1>
-
-                                    <p>explicabo rerum adipisci ratione, blanditiis
-                                        natus nesciunt vitae similique. Laboriosam, hic.
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a fuga
-                                        voluptatem
-                                        quod
-                                        deleniti tempora officiis Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing
-                                        elit. Quia
-                                    </p>
-                                </div>
-                                <a href="https://github.com/littlesoldier2019?tab=repositories" target= _blank><button
-                                        class="btn-linkedup">Learn more</button></a>
                             </div>
-                        </label>
+                            <div class="slider-item">
+                                <h1 class="slider-date">10th February 2020 7:15 AM</h1>
 
+                                <p>explicabo rerum adipisci ratione, blanditiis
+                                    natus nesciunt vitae similique. Laboriosam, hic.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a fuga
+                                    voluptatem
+                                    quod
+                                    deleniti tempora officiis Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing
+                                    elit. Quia
+                                </p>
+                            </div>
+                            <a href="https://github.com/littlesoldier2019?tab=repositories" target=_blank><button
+                                    class="btn-linkedup">Learn more</button></a>
+                        </div>
                     </div>
 
-                    <div class="slider-content-3">
+                    <div class="slider-content">
                         <div class="slider-content__image">
                             <img src="./image/Oby.jpg" alt="">
                         </div>
 
-                        <label for="text-expand">
-                            <div class="slider-content__text">
+                        <div class="slider-content__text">
 
-                                <div class="slider-header">
-                                    <div class="slider-title">
-                                        <h2>That's Oby</h2>
+                            <div class="slider-header">
+                                <div class="slider-title">
+                                    <h2>That's Oby</h2>
+                                </div>
+
+                                <div class="social-media__content">
+                                    <div class="linkedin"><a href='#'>
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
                                     </div>
-
-                                    <div class="social-media__content">
-                                        <div class="linkedin"><a href='#'>
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </div>
-                                        <div class="github"> <a href='#'>
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                        </div>
-                                        <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </div>
-                                        <div class="twitter"> <a href='#'>
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </div>
-                                        <div class="instagram"> <a href='#'>
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </div>
+                                    <div class="github"> <a href='#'>
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="facebook"> <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="twitter"> <a href='#'>
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="instagram"> <a href='#'>
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="slider-item">
-                                    <h1 class="slider-date">18th August 2020 15:18 AM</h1>
+                            </div>
+                            <div class="slider-item">
+                                <h1 class="slider-date">18th August 2020 15:18 AM</h1>
 
-                                    <p>explicabo rerum adipisci ratione, blanditiis
-                                        natus nesciunt vitae similique. Laboriosam, hic.
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a fuga
-                                        voluptatem
-                                        quod
-                                        deleniti tempora officiis Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing
-                                        elit. Quia
-                                    </p>
-                                </div>
-                                <a href="https://github.com/obymanyando?tab=repositories" target= _blank><button
-                                        class="btn-linkedup">Learn
-                                        more</button>
-                            </div></a>
-                        </label>
-
+                                <p>explicabo rerum adipisci ratione, blanditiis
+                                    natus nesciunt vitae similique. Laboriosam, hic.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias a fuga
+                                    voluptatem
+                                    quod
+                                    deleniti tempora officiis Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing
+                                    elit. Quia
+                                </p>
+                            </div>
+                            <a href="https://github.com/obymanyando?tab=repositories" target=_blank><button
+                                    class="btn-linkedup">Learn
+                                    more</button></a>
+                        </div>
                     </div>
                 </label>
 
@@ -276,6 +272,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div> 
 </body>
-
+<script src="droppost.js"></script>
 </html>
