@@ -34,8 +34,8 @@ body {
 	background-color: rgb(166, 166, 231);
 	overflow: hidden;
 	background: url(https://cdn.pixabay.com/photo/2013/09/03/19/46/bud-178723_960_720.jpg);
-	-webkit-filter: blur(150px);
-	filter: blur(150px);
+	-webkit-filter: contrast(175%) brightness(8%);
+	filter: contrast(175%) brightness(8%); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -60,7 +60,7 @@ body {
 }
 
 .info ul li {
-	padding: 5px;
+	padding: 10px 10px 0px;
 }
 
 .showpost {
